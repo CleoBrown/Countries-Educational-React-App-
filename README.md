@@ -89,7 +89,7 @@ npm run seeds
 - Run server (runs the app in the development mode):<br>
 <br>Run:
 ```
-npm start 
+npm run start 
 ```
 
 
