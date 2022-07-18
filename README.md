@@ -65,7 +65,7 @@ npm init -y
 ```
 
 
- - Create a web server with **Express**:<br>
+ - Create a web server with JavaScript library **Express**:<br>
  <br>Run:
  ```
 npm install express
@@ -111,7 +111,7 @@ npm run seeds
 - Run server (runs the app in the development mode):<br>
 <br>Run:
 ```
-npm start 
+npm run start 
 ```
 
 
