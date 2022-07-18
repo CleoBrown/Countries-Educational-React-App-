@@ -39,6 +39,12 @@ docker exec mongod bash -c "mongo < seed_data.js"
 
 App should be running on [localhost:3000](http://localhost:3000)
 
+Stop the containers:
+
+```
+docker-compose down
+```
+
 ---
 
 
