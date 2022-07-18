@@ -1,11 +1,10 @@
-FROM mongo
+FROM node
 
 WORKDIR /app
 
 COPY package*.json ./
 
-RUN apt-get update && \
-    apt install nodejs npm -y && \ 
+RUN npm update && \ 
     npm install
 
 COPY . .
@@ -13,6 +12,7 @@ COPY . .
 WORKDIR /app/server
 
 RUN npm init -y && \
+    npm update && \
     npm install && \
     npm install express mongodb@3.5.7
 
