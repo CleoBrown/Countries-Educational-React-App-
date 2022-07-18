@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const db_uri = process.env.DB_URI || "localhost";
+const db_hostname = process.env.DB_HOSTNAME || "localhost";
 
 app.use(express.json());
 app.use(cors());
@@ -9,8 +9,8 @@ app.use(cors());
 const MongoClient = require('mongodb').MongoClient;
 const createRouter = require('./helpers/create_router.js');
 
-MongoClient.connect(`mongodb://${db_uri}:27017/`, { useUnifiedTopology: true })
-    .then(console.log(`Connected to mongodb://${db_uri}:27017/`))
+MongoClient.connect(`mongodb://${db_hostname}:27017/`, { useUnifiedTopology: true })
+    .then(console.log(`Connected to mongodb://${db_hostname}:27017/`))
     .then((client) => {
         const db = client.db('countriesApp');
         const countriesCollection = db.collection('countries');
