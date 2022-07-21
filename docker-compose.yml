@@ -1,0 +1,38 @@
+version: '3.9'
+services:
+  mongo:
+    image: mongo
+    container_name: mongod
+    volumes:
+      - ${PWD}/server/db/seed_data.js:/seed_data.js:ro
+    ports:
+      - 27017:27017
+
+  client:
+    image: countries-client
+    container_name: app-web
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+      - server
+
+  server:
+    image: countries-server
+    container_name: app-db
+    restart: always
+    environment:
+      - DB_HOSTNAME=mongo
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    ports:
+      - 9000:9000
+    depends_on:
+      - mongo
+    links:
+      - mongo
