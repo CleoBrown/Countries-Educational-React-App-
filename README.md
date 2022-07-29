@@ -1,6 +1,6 @@
 # Countries Educational React App
 
-![Homepage](https://github.com/CleoBrown/countries-educational-react-app-/blob/main/countries_app_homepage.png)
+![Homepage](./countries_app_homepage.png)
 
 ## Project Brief - Educational App
 
