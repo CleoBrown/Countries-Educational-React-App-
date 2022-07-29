@@ -50,7 +50,7 @@ docker-compose down
 ---
 
 
-## Manual steps to run
+## Alternative manual steps to run
 
 This project was bootstrapped with Create React App.<br>
 To run the following ensure  Node.js installed https://nodejs.org/en/ <br>
