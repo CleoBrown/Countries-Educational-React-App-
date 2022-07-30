@@ -123,7 +123,7 @@ npm run start
 ```
 
 
-Open http://localhost:3000 to view it in your browser.
+App should be running on [localhost:3000](http://localhost:3000)
 
 *(leave terminal window running)*
 
