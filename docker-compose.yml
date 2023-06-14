@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   mongo:
-    image: mongo
+    image: mongo:5.0
     container_name: mongod
     volumes:
       - ${PWD}/server/db/seed_data.js:/seed_data.js:ro
